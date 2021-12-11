@@ -2,6 +2,13 @@
 
 include 'db_conn.php';
 
+session_start();
+
+//Control de acceso:
+if (isset($_SESSION['id'])) {
+    header('Location: home.php');
+}
+
 $error =  false;
 $errores['email'] = ' ';
 $errores['pw'] = ' ';
@@ -9,8 +16,6 @@ $errores['nombre'] = ' ';
 $errores['repeatPW'] = ' ';
 
 if(isset($_POST['registrar'])) {
-
-    session_start();
 
     if(empty($_POST['email'])) {
         $errores['email'] = "Se requiere un email.";

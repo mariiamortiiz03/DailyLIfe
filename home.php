@@ -4,6 +4,12 @@ include 'db_conn.php';
 
 session_start();
 
+//Control de acceso:
+if (empty($_SESSION['id'])) {
+    header('Location: login.php');
+}
+
+
 if(isset($_POST['cerrar'])) {
     session_destroy();
     header("Location:login.php");
@@ -22,11 +28,14 @@ if(isset($_POST['cerrar'])) {
     <link rel="stylesheet" href="css/style.css">
     <!--Bootstrap-->
     <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    
 
 </head>
 
 <body>
     <!--menu de navegacion ADAPTARLO Lenin-->
+
+
     <nav class="navbar navbar-expand navbar-light bg-light">
         <div class="nav navbar-nav">
             <div>
@@ -36,15 +45,14 @@ if(isset($_POST['cerrar'])) {
             <form action="" method="POST">
                 <button type="submit" name="cerrar">Cerrar Sesion</button>
             </form>
-            
         </div>
     </nav>
     <!--menu de navegacion  Lenin-->
 
 
+    <div id="page">
 
-
-    <div class="main-section">
+    <div class="main-section" id="main">
         <div class="add-section">
             <form action="app/add.php" method="POST" autocomplete="off">
                 <?php if (isset($_GET['mess']) && $_GET['mess'] == 'error') { ?>
@@ -88,7 +96,7 @@ if(isset($_POST['cerrar'])) {
         </div>
     </div>
 
-
+    </div>
 
     <script src="js/jquery-3.2.1.min.js"></script>
 
@@ -128,7 +136,7 @@ if(isset($_POST['cerrar'])) {
         });
     </script>
 
-
+    
 
 </body>
 
