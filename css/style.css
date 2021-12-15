@@ -153,12 +153,12 @@ body {
   grid-template-rows: 1fr;
   grid-column-gap: 50px;
   grid-row-gap: 0px;
- 
+
 }
 
 .div1 {
   grid-area: 1 / 1 / 2 / 2;
-   
+
 }
 
 .div2 {
@@ -318,80 +318,146 @@ body {
   grid-column-gap: 33px;
   grid-row-gap: 0px;
   padding-top: 160px;
- 
-  height: 600px ;
-  
+
+  height: 600px;
+
 }
 
 .div1 {
   grid-area: 1 / 1 / 2 / 2;
   padding-left: 200px;
-  
+
 }
 
 .div2 {
   grid-area: 1 / 2 / 2 / 3;
-padding-right: 200px
-
+  padding-right: 200px
 }
 
 
-.btn-primary,
-.btn-primary:active,
-.btn-primary:visited {
-  background-color: #dd4415 !important;
 
-}
+.navbar-brand {
 
-
-.navbar-brand{
-
-font-family:Arial, Helvetica, sans-serif;
-padding-left: 100px;
-font-size: xx-large;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-left: 100px;
+  font-size: xx-large;
 
 
 }
 
-.div4{
+.div4 {
 
-margin-top: 280px;
-text-align: center;
-color: white;
-font-size: 3.5em;
+  margin-top: 280px;
+  text-align: center;
+  color: white;
+  font-size: 3.5em;
 
 }
 
-.texto1{
+.texto1 {
 
-color: white;
-font-size: 1.5em;
-text-align: center;
+  color: white;
+  font-size: 1.5em;
+  text-align: center;
 
 
 }
 
 .agenda {
 
-padding-left: 160px;
+  padding-left: 160px;
 
 
 }
 
-.texto2{
+.texto2 {
 
-color: white;
-font-size: 1.5em;
-text-align: left;
+  color: white;
+  font-size: 1.5em;
+  text-align: left;
 
 
 }
 
-h3{
+h3 {
   font-size: 2.5em;
   color: white;
 }
 
+.navbar-brand {
+
+  margin-right: 1100px;
+}
+
+.nav-link:hover {
+
+  background-color: #ffa420;
+  transition: 1s;
+  border-radius: 10%;
+  color: black;
+
+}
+
+.btn-primary {
+  background-color: #e95420;
+
+}
+
+.btn-primary:hover {
+  background-color: #ffa420;
+  transition: 1s;
+  color: black;
+
+}
+
+.btnPresentacion {
+
+  margin-left: 400px;
+
+
+}
+
+.botonRegistro {
+
+  margin-left: 155px;
+
+}
+
+.centradoBotonesLogin {
+
+  margin-left: 125px;
+}
+
+span {
+
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+.navbar-nav {
+  font-family: Arial, Helvetica, sans-serif;
+
+
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.centrar {
+
+  margin-left: 120px;
+
+
+}
+
+.centrarLogin {
+
+  margin-left: 150px;
+
+}
 
 
   /************************* fin Estilos de la pagina de presentacion (Lenin)***********************************/
