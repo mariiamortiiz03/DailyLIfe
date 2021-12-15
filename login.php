@@ -2,7 +2,14 @@
 /*verifica que se haya logado, si es asi lo manda al index a registrar actividad*/
 include 'db_conn.php';
 
+session_start();
 
+//Control de acceso:
+if (!empty($_SESSION['nombre'])) {
+    header('Location: home.php');
+}
+
+var_dump($_SESSION['nombre']);
 
 $error =  false;
 $errores['email'] = ' ';
@@ -10,9 +17,7 @@ $errores['pw'] = ' ';
 
 if (isset($_POST['login'])) {
 
-    session_start();
-
-    if (empty($_POST['email'])) {
+    if(empty($_POST['email'])) 
         $errores['email'] = "Se requiere un email.";
         $error = true;
     } else if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
